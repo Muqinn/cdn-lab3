@@ -1,0 +1,19 @@
+version: '3'
+services:
+  as:
+    build: ./AS
+    container_name: as
+    ports:
+      - "53533:53533/udp"
+  fs:
+    build: ./FS
+    container_name: fs
+    ports:
+      - "9090:9090"
+  us:
+    build: ./US
+    container_name: us
+    ports:
+      - "8080:8080"
+
+      
